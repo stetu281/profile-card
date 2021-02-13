@@ -17,6 +17,22 @@ main {
     justify-content: center;
     align-items: center;
     background-color: hsl(185, 75%, 39%);
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-top, .bg-bottom {
+    position: absolute;
+}
+
+.bg-top {
+    top: -500px;
+    left: -800px;
+}
+
+.bg-bottom {
+    top: 300px;
+    left: 180px;
 }
 
 .card {
@@ -24,6 +40,7 @@ main {
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
+    z-index: 1;
 }
 
 .card-top {
@@ -76,4 +93,15 @@ main {
 .stats-description {
     font-size: 0.9rem;
     margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 1440px) {
+    .bg-top {
+        left: -250px;
+    }
+
+    .bg-bottom {
+        top: 400px;
+        left: 700px;
+    }
 }
